@@ -344,11 +344,19 @@
 		padding: 0 1em;
 	}
 
+<<<<<<< HEAD:assets/css/wiki.css
 	.group_wiki .toc-item {
 		position: relative;
   		/* padding-left: 0.25em; /* space for the caret */
   		display: flex;
   		align-items: center;
+=======
+/* Collapsible table of contents (group wikis) */
+	.group_wiki .toc-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+>>>>>>> 56e1f714b1 (com_wiki: style the collapsible TOC on group wikis):core/plugins/groups/wiki/assets/css/wiki.css
 	}
 
 	.group_wiki .toc-item .toggle-button {
@@ -381,13 +389,21 @@
 
 	.group_wiki .toc-item .toggle-button::before {
 		font-family: 'Fontcons';
+<<<<<<< HEAD:assets/css/wiki.css
 		content: '\f0da'; /* Always show closed caret shape */
+=======
+		content: '\f0da'; /* caret; rotates when expanded */
+>>>>>>> 56e1f714b1 (com_wiki: style the collapsible TOC on group wikis):core/plugins/groups/wiki/assets/css/wiki.css
 		display: inline-block;
 		transition: transform 0.2s ease;
 	}
 
 	.group_wiki .toc-item .toggle-button[aria-expanded="true"]::before {
+<<<<<<< HEAD:assets/css/wiki.css
 		transform: rotate(90deg); /* Rotates caret to point down */
+=======
+		transform: rotate(90deg);
+>>>>>>> 56e1f714b1 (com_wiki: style the collapsible TOC on group wikis):core/plugins/groups/wiki/assets/css/wiki.css
 	}
 
 	.group_wiki .toc-item .tocnumber {
