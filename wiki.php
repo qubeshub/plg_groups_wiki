@@ -179,7 +179,7 @@ class plgGroupsWiki extends \Qubeshub\Plugin\Plugin
 				Request::setVar('scope', $group->get('cn') . DS . $active);
 			}*/
 
-			// Group wiki settings (managers only): automatic table-of-contents behavior
+			// Group wiki settings (managers only): automatic table-of-contents and page crumbs
 			if ($action == 'settings' || $action == 'savesettings')
 			{
 				if (User::isGuest() || ($authorized != 'manager' && $authorized != 'admin'))
@@ -200,6 +200,8 @@ class plgGroupsWiki extends \Qubeshub\Plugin\Plugin
 
 					$threshold = Request::getString('toc_threshold', '');
 					$params->set('toc_threshold', ($threshold !== '' && ctype_digit($threshold)) ? (int) $threshold : '');
+
+					$params->set('wiki_crumbs', Request::getInt('wiki_crumbs', 0) ? 1 : 0);
 
 					$group->set('params', $params->toString());
 					$group->update();
